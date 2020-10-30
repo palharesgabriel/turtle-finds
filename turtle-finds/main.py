@@ -6,7 +6,7 @@ from grid import Grid
 from turtle import Turtle
 from random import randint
 
-screen =  pygame.display.set_mode([600,480])
+screen =  pygame.display.set_mode([720,600])
 screen.fill([240, 183, 179])
 container = Container()
 grid = Grid()
