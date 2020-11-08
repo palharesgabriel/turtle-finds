@@ -4,10 +4,15 @@ class Turtle(pygame.sprite.Sprite):
     def __init__(self, width, height, x, y, color):
         super().__init__()
         
-        self.image = pygame.image.load("turtle-finds/turtle.png")
+        self.image = pygame.image.load("turtle-finds/assets/turtle.png")
         self.image = pygame.transform.scale(self.image,(49,49))
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
+        self.gridPos = 0
+
+    def set_initial_position(self, x, y, matrix):
+        self.rect.center = matrix[x][y]
+        self.gridPos = (x,y)
 
     def move_turtle(self, movementType):
         count = 0
